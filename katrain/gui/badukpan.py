@@ -300,18 +300,18 @@ class BadukPanWidget(Widget):
                 self.resize_board()
 
             self.draw_board_background(katrain, current_gridpos_x, current_gridpos_y, x_grid_spaces, y_grid_spaces, grid_spaces_margin_x, grid_spaces_margin_y)
-            self.draw_lines(current_gridpos_x, current_gridpos_y)
-            self.draw_star_points(board_size_x, board_size_y)
+            self.draw_lines(current_gridpos_x, current_gridpos_y, self.grid_size)
+            #self.draw_star_points(board_size_x, board_size_y)
             self.draw_coordinates(current_gridpos_x, current_gridpos_y)
 
 
     def get_grid_spaces_margins(self):
         if self.draw_coords_enabled:
-            grid_spaces_margin_x = [1.5, 0.75]  # left, right
-            grid_spaces_margin_y = [1.5, 0.75]  # bottom, top
+            grid_spaces_margin_x = [1.5, 1]  # left, right
+            grid_spaces_margin_y = [1.5, 1]  # bottom, top
         else:  # no coordinates means remove the offset
-            grid_spaces_margin_x = [0.75, 0.75]  # left, right
-            grid_spaces_margin_y = [0.75, 0.75]  # bottom, top
+            grid_spaces_margin_x = [1, 1]  # left, right
+            grid_spaces_margin_y = [1, 1]  # bottom, top
         return grid_spaces_margin_x, grid_spaces_margin_y
 
 
@@ -419,12 +419,12 @@ class BadukPanWidget(Widget):
             texture=cached_texture(Theme.BOARD_TEXTURE),
         )
 
-    def draw_lines(self, gridpos_x, gridpos_y):
+    def draw_lines(self, gridpos_x, gridpos_y, grid_size):
         Color(*Theme.LINE_COLOR)
         for i in range(len(gridpos_x)):
-            Line(points=[(gridpos_x[i], gridpos_y[0]), (gridpos_x[i], gridpos_y[-1])])
+            Line(points=[(gridpos_x[i], gridpos_y[0] - grid_size/2), (gridpos_x[i], gridpos_y[-1] + grid_size/2)])
         for i in range(len(gridpos_y)):
-            Line(points=[(gridpos_x[0], gridpos_y[i]), (gridpos_x[-1], gridpos_y[i])])
+            Line(points=[(gridpos_x[0] - grid_size/2, gridpos_y[i]), (gridpos_x[-1] + grid_size/2, gridpos_y[i])])
 
 
     def draw_star_points(self, board_size_x, board_size_y):
@@ -446,7 +446,7 @@ class BadukPanWidget(Widget):
         if self.draw_coords_enabled:
             board_size_x, board_size_y = self.katrain.game.board_size
             Color(0.25, 0.25, 0.25)
-            coord_offset = round(self.grid_size * 1.5 / 2, 12)
+            coord_offset = round(self.grid_size, 12)
 
             if (self.rotation_degree == 90 or self.rotation_degree == 270) and board_size_x != board_size_y:
                 board_size_y, board_size_x = self.katrain.game.board_size
@@ -455,14 +455,14 @@ class BadukPanWidget(Widget):
                 draw_text(
                     pos=(gridpos_x[i], gridpos_y[0] - coord_offset),
                     text=self.get_x_coordinate_text(i, board_size_x),
-                    font_size=self.grid_size / 1.5,
+                    font_size=self.grid_size / 2,
                     font_name="Roboto",
                 )
             for i in range(board_size_y):
                 draw_text(
                     pos=(gridpos_x[0] - coord_offset, gridpos_y[i]),
                     text=self.get_y_coordinate_text(i, board_size_y),
-                    font_size=self.grid_size / 1.5,
+                    font_size=self.grid_size / 2,
                     font_name="Roboto",
                 )
 
