@@ -1,4 +1,4 @@
-# <a name="manual"></a> KaTrain
+# <a name="manual"></a> KaTrain Daoqi version
 
 [![Latest Release](http://img.shields.io/github/release/sanderland/katrain?label=download)](http://github.com/sanderland/katrain/releases)
 [![License:MIT](http://img.shields.io/pypi/l/katrain)](http://en.wikipedia.org/wiki/MIT_License)
