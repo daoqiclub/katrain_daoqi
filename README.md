@@ -19,7 +19,7 @@ KaTrain is a tool for analyzing games and playing go with AI feedback from KataG
 <table>
 <td>
 
-* [Previews and YouTube tutorials](#preview)
+* [Screen Shot](#preview)
 * [Installation](#install)
 * [Manual](#ai)
     * [Configuring KataGo](#kata)
@@ -49,17 +49,17 @@ KaTrain is a tool for analyzing games and playing go with AI feedback from KataG
 </td>
 </table>
 
-## <a name="preview"></a>  Screen Shot
+## <a name="preview"></a> Screen Shot
 
-<img alt="screenshot" src="https://github.com/daoqiclub/katrain_daoqi/blob/main/screenshots/analysis.png" width="550">
+<img alt="screenshot" src="https://github.com/daoqiclub/katrain_daoqi/blob/main/screenshots/Screenshot.png" width="550">
 
 ## <a name="install"></a> Installation
 * git clone https://github.com/daoqiclub/katrain_daoqi.git
 * cd katrain_daoqi/
 * pip install .
-#在国内上一行pip安装建议用下面的命令代替：
+#在国内这一行pip安装建议用下面的命令代替：
 * pip install -i https://pypi.tuna.tsinghua.edu.cn/simple .
-* run 'katrain' in treminal
+* run 'katrain' in terminal
 
 ## <a name="kata"></a>  Configuring KataGo
 
