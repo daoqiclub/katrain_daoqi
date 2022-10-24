@@ -49,22 +49,17 @@ KaTrain is a tool for analyzing games and playing go with AI feedback from KataG
 </td>
 </table>
 
-## <a name="preview"></a>  Preview and Youtube Videos
+## <a name="preview"></a>  Screen Shot
 
 <img alt="screenshot" src="https://github.com/daoqiclub/katrain_daoqi/blob/main/screenshots/analysis.png" width="550">
 
-| **Local Joseki Analysis**                  | **Analysis Tutorial**                                                                              | **Teaching Game Tutorial**                                                                                   |
-|:-----------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------:|
-| [![Local Joseki Analysis Video](http://i.imgur.com/YcpmSBx.png)](https://www.youtube.com/watch?v=tXniX57KtKk) | [![Analysis Tutorial](http://i.imgur.com/3EP4IEr.png)](http://www.youtube.com/watch?v=qjxkcKgrsbU) | [![ Teaching Game Tutorial](http://i.imgur.com/jAdcSL5.png)](http://www.youtube.com/watch?v=wFl4Bab_eGM)   |
-
-
-
 ## <a name="install"></a> Installation
-* See the [releases page](http://github.com/sanderland/katrain/releases) for downloadable executables for Windows and macOS.
-* Alternatively use `pip3 install -U katrain` to install the latest version from PyPI on any 64-bit OS.
-* On macOS, you can also use `brew install katrain` to install the app.
-* [This page](https://github.com/sanderland/katrain/blob/master/INSTALL.md) has detailed instructions for Window, Linux and macOS,
-  as well as troubleshooting and setting up KataGo to use multiple GPUs.
+* git clone https://github.com/daoqiclub/katrain_daoqi.git
+* cd katrain_daoqi/
+* pip install .
+#在国内上一行pip安装建议用下面的命令代替：
+* pip install -i https://pypi.tuna.tsinghua.edu.cn/simple .
+* run 'katrain' in treminal
 
 ## <a name="kata"></a>  Configuring KataGo
 
