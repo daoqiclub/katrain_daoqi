@@ -51,7 +51,7 @@ KaTrain is a tool for analyzing games and playing go with AI feedback from KataG
 
 ## <a name="preview"></a>  Preview and Youtube Videos
 
-<img alt="screenshot" src="https://raw.githubusercontent.com/sanderland/katrain/master/screenshots/analysis.png" width="550">
+<img alt="screenshot" src="https://github.com/daoqiclub/katrain_daoqi/blob/main/screenshots/analysis.png" width="550">
 
 | **Local Joseki Analysis**                  | **Analysis Tutorial**                                                                              | **Teaching Game Tutorial**                                                                                   |
 |:-----------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------:|
